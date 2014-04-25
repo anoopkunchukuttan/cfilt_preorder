@@ -6,22 +6,14 @@ This package contains a rule based system for reordering English sentences to co
 Prerequisites
 =============
 
--OS - Linux
--perl should be installed 
--python xml library(lxml) should be installed 
+- OS - Linux
+- perl should be installed 
+- python xml library(lxml) should be installed 
 (Can be installed using command "#yum install python-lxml")
 -Copy the "Parse" folder to one of the dir where perl is installed-
-Perl instllation folders for ubuntu and fedora are given bellow-
-
-Fedora-
-/usr/local/share/perl5
-/usr/share/perl5
-
-Ubuntu-
-/etc/perl
-/usr/share/perl5
-/usr/local/share/perl/5.8.8
-Stanford Parser Version 3.2.0
+- Perl Recursive Descent Parser require: Module: Parse::RecDescent 
+  - In Ubuntu, this can be obtained by installing the package: libparse-recdescent-perl
+- Stanford Parser Version 3.2.0
 
 Installation:
 ============

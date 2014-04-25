@@ -27,9 +27,14 @@ else
     then         
         echo "Running rules tuned for Hindi"
 	    cat $1.stanford.parsed | perl $WORKDIR/codkiller-V1.0.pl > $1.cod
-    else
+    elif [ $2 = "generic" ]
+    then     
         echo "Running generic Indian language rules"
 	    cat $1.stanford.parsed | perl $WORKDIR/codkiller-V1.0_generic.pl > $1.cod
+    elif [ $2 = "toplevel" ]
+    then     
+        echo "Running toplevel Indian language rules"
+	    cat $1.stanford.parsed | perl $WORKDIR/codkiller-V1.0_toplevel.pl > $1.cod
     fi
 	cat $1.cod |tr -s ' ' >$1.codk
     cat $1.codk |  sed 's/^ //' | sed 's,^MAGIC_SENTENCE_FROM_CFILT$,,g' >$1.v1.0codkilled
