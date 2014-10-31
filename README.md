@@ -7,8 +7,7 @@ This package contains a rule based system for reordering English sentences to co
 - OS - Linux
 - perl should be installed 
 - python xml library(lxml) should be installed 
-(Can be installed using command "#yum install python-lxml")
--Copy the "Parse" folder to one of the dir where perl is installed-
+(Can be installed on Fedora using command "#yum install python-lxml")
 - Perl Recursive Descent Parser require: Module: Parse::RecDescent 
   - In Ubuntu, this can be obtained by installing the package: libparse-recdescent-perl
 - Stanford Parser Version 3.2.0
@@ -22,16 +21,16 @@ This package contains a rule based system for reordering English sentences to co
 2. Run the command 
     ./reorderEnglish.sh <input_file_path> <rules_to_run>  
     <rules_to_use> can take one of two values: hindi_tuned or generic
-    These are two sets of rules. The 'hindi_tuned' rules are a superset of 'generic' rules, and usually perform better.
+    These are two sets of rules. The 'hindi_tuned' rules are a superset of 'generic' rules, and usually perform better. Your distribution may have only the 'generic' rules. 
 
     The input file is reordered and the reordered sentences are stored in the file <input_file_path>.v1.0codkilled
 
 
 ## Contributors
-Ananthakrishnan Ramanathan
-Ritesh Shah
-Jayprasad Hegde
-Rajnath Patel 
-Rajen Chatterjee
-Anoop Kunchukuttan
-    
+
+- Ananthakrishnan Ramanathan
+- Ritesh Shah
+- Jayprasad Hegde
+- Rajnath Patel 
+- Rajen Chatterjee
+- Anoop Kunchukuttan
