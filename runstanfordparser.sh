@@ -1,8 +1,7 @@
 #!/bin/bash
 #created by Raj Nath Patel on Mar 21 , 2012
 
-#WORKDIR=`pwd`
-WORKDIR=`dirname $0`
+WORKDIR=$STANFORD_PARSER_HOME
 
 if [ $# != 1 ]
 then
