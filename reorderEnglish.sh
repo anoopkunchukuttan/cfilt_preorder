@@ -9,19 +9,12 @@ WORKDIR=`dirname $0`
 
 if [ $# -lt 2 ]
 then
-	echo "Usage: $0 unfactored_input_file rules_to_use [factored_input_file] "
-    echo "rules_to_use <hindi_tuned> <generic>"
+	echo "Usage: $0 <input_file> generic"
 	exit 1
 else
     sed 's,^\s*$,MAGIC_SENTENCE_FROM_CFILT,g' $1 > $1.in
 	sh $WORKDIR/runstanfordparser.sh $1.in
     mv $1.in.parsed $1.parsed
-    if [ $# -eq 3 ]
-    then     
-	python  $WORKDIR/addFactorToParseTree.py $3 $1.parsed $1.parsed.factored
-	cp $1.parsed $1.parsed.temp
-	mv $1.parsed.factored $1.parsed
-    fi
 	python $WORKDIR/convert.py $1
     if [ $2 = "hindi_tuned" ]
     then         
@@ -37,6 +30,6 @@ else
 	    cat $1.stanford.parsed | perl $WORKDIR/codkiller-V1.0_toplevel.pl > $1.cod
     fi
 	cat $1.cod |tr -s ' ' >$1.codk
-    cat $1.codk |  sed 's/^ //' | sed 's,^MAGIC_SENTENCE_FROM_CFILT$,,g' >$1.v1.0codkilled
+    cat $1.codk |  sed 's/^ //' | sed 's,^MAGIC_SENTENCE_FROM_CFILT$,,g' >$1.codkilled.v1.0
 	echo 'Cheers!'
 fi
