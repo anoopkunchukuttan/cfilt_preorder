@@ -4,10 +4,9 @@ This package contains a rule based system for reordering English sentences to co
 
 ## Pre-requisites
 
-- OS - Linux
+- OS - Linux, Mac OS X
 - Perl
 - Perl Recursive Descent Parser require: Module: Parse::RecDescent 
-  - In Ubuntu, this can be obtained by installing the package: libparse-recdescent-perl
 - Stanford Parser Version 3.2.0
 
 ## Instructions
