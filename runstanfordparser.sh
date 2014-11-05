@@ -9,7 +9,8 @@ then
 	echo "Please ensure that the input file is in a format acceptable to the bikelparser"
 	exit 1
 else
-	sh $WORKDIR/lexparser.sh $1 |tee $1.parsed
+    curdir=`dirname $0`
+	sh $curdir/lexparser.oneline.sh $1 |tee $1.parsed
 	echo "runstanfordparser.sh: output file @ $1.parsed"
 	echo "Have a nice day !"
 fi
