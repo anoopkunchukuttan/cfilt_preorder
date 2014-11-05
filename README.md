@@ -15,11 +15,12 @@ This package contains a rule based system for reordering English sentences to co
 1. Download and unzip cfilt_preorder.tar.gz
 
 2. Export an environment variable 'STANFORD_PARSER_HOME' 
+
     > export STANFORD_PARSER_HOME=<path to the Stanford parser home directory>
 
 ## Usage: 
 
-1. Change to the Stanford home directory (STANFORD_PARSER_HOME)
+1. Change to the *cfilt_preorder* home directory.
 2. Run the command 
   > ./reorderEnglish.sh <input_file_path> generic 
 
