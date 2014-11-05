@@ -5,23 +5,20 @@ This package contains a rule based system for reordering English sentences to co
 ## Prerequisites
 
 - OS - Linux
-- perl should be installed 
-- python xml library(lxml) should be installed 
-(Can be installed on Fedora using command "#yum install python-lxml")
+- Perl
 - Perl Recursive Descent Parser require: Module: Parse::RecDescent 
   - In Ubuntu, this can be obtained by installing the package: libparse-recdescent-perl
 - Stanford Parser Version 3.2.0
 
-## Installation:
-1. Install Stanford Parser
-2. Copy the contents of this directory to the root directory of the Stanford Parser installation
+## Instructions
+
+1. Download and unzip cfilt_preorder.tar.gz in the stanford home directory 'default: STANFORD_HOME'
 
 ## Usage: 
-1. Change directory to root direction of Stanford Parser Installation
+
+1. Change to the stanford home directory (STANFORD_HOME)
 2. Run the command 
-    ./reorderEnglish.sh <input_file_path> <rules_to_run>  
-    <rules_to_use> can take one of two values: hindi_tuned or generic
-    These are two sets of rules. The 'hindi_tuned' rules are a superset of 'generic' rules, and usually perform better. Your distribution may have only the 'generic' rules. 
+    ./reorderEnglish.sh <input_file_path> generic 
 
     The input file is reordered and the reordered sentences are stored in the file <input_file_path>.v1.0codkilled
 
