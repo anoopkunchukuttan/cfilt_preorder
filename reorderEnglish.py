@@ -20,7 +20,9 @@ class EN_to_IL_Reorder_Worker(Source_Reorder_Worker):
 
         self._script_name='codkiller-V1.0{}.pl'.format('' if reorder_mode=='hindi_tuned' else '_'+reorder_mode)
 
-        self._pipeline=sockwrap.SockWrap("justparse", corenlp_libdir=self._stanford_core_dir)
+        self._pipeline=sockwrap.SockWrap("justparse", 
+                                            corenlp_libdir=self._stanford_core_dir, 
+                                            configfile=self._cfilt_preorder_dir+'/reorderEnglish.ini')
 
     def src_reorder_sentence(self,sentence):
         
@@ -44,8 +46,10 @@ class EN_to_IL_Reorder_Worker(Source_Reorder_Worker):
         return  re.sub(ur'[ ]+',u' ',reord_string.strip())
 
 if __name__=='__main__':
+
     reord_inst=EN_to_IL_Reorder_Worker(stanford_core_dir='/home/anoop/installs/stanford-corenlp-full-2014-06-16',
-                            cfilt_preorder_dir='/home/anoop/installs/cfilt_preorder')
+                            cfilt_preorder_dir='/home/anoop/installs/cfilt_preorder_src')
 
     print reord_inst.src_reorder_sentence('In summer I like to eat mangoes .')
+    print reord_inst.src_reorder_sentence('Alphonso mangoes are very famous.')
 
