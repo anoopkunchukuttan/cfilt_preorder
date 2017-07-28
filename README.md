@@ -1,4 +1,6 @@
-# CFILT-Preorder: Source Side reordering Rules for English-Indian language SMT
+# CFILT-Preorder 
+
+_Source Side reordering Rules for English-Indian language SMT_
 
 This package contains a rule based system for reordering English sentences to conform to the word order in Indian languages. It has been developed keeping Hindi in mind as the target language, but has been found to work for other Indian languages too. The reordered English sentences can be used instead of the original sentences for training a phrase SMT system from English to Indian languages. 
 
