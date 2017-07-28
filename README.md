@@ -26,10 +26,11 @@ This package contains a rule based system for reordering English sentences to co
 2. Run the command 
   > ./reorderEnglish.sh <input_file_path> [generic/hindi_tuned] 
 
-    _generic_ uses reordering rules that are generic to all Indian languages
-    _hindi\_tuned_ uses additional reordering rules that were tuned for Hindi. However, these have been found to work well for other Indian languages. We recommend that you use this option. 
+_generic_ uses reordering rules that are generic to all Indian languages
+
+_hindi\_tuned_ uses additional reordering rules that were tuned for Hindi. However, these have been found to work well for other Indian languages. We recommend that you use this option. 
     
-    The input file is reordered and the reordered sentences are stored in the file <input_file_path>.v1.0codkilled
+The input file is reordered and the reordered sentences are stored in the file <input_file_path>.v1.0codkilled
 
 
 ## Contributors
